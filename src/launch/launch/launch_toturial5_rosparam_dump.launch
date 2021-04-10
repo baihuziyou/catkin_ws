@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+
+
+    <rosparam command="dump" file="$(find launch)/yaml/my_yaml_output.yaml"/>
+
+
+</launch>

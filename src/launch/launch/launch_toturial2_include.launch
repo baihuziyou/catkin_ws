@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+<!-- 
+    inlcude使用
+    $()括号中find 后面接功能包名，可以动态的获取包名的位置，后面是功能包中对应的launch文件
+    ns="xxx"    :在指定命名空间导入文件
+    env              : 环境变量的设置
+    arg               :讲参数传递给被包含的文件
+ -->
+    <include file="$(find launch)/launch/launch_toturials_nodel.launch"/>
+
+</launch>

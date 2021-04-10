@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+<!--  remap：话题重命名
+    turtlesim_node乌龟仿真节点接受控制的话题名称是 /turtle1/cmd_vel ，
+    teleop_twist_keyboard（功能包）：功能包是一个键盘仿真节点，比turtlesime_teleop_key好用，
+    使用sudo apt-get install ros-melodic-teleop-twist-keyboard安装。
+    使用：rosrun teleop_twist_keyboard teleop_twist_keyboard.py 会产生一个键盘仿真节点，
+    他发布的话题名称的类型是geometry_msgs/Twist，但是他发布的话题名称是/cmd_vel。
+
+    总之：乌龟的控制节点话题名称和键盘节点话题名称，1.类型一样。2.名称不一样。用remap解决
+        
+ -->
+
+    <node name="my_turtlesim" pkg="turtlesim" type="turtlesim_node" output="screen" >
+        <remap from="/turtle1/cmd_vel" to="/cmd_vel"/>
+    </node>
+
+    <node name="my_teleop" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen"/>
+    
+
+</launch>

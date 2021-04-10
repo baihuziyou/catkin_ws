@@ -1,0 +1,3 @@
+roslaunch:
+  uris: {host_baihuziyou_virtual_machine__42925: 'http://baihuziyou-virtual-machine:42925/'}
+run_id: 28347e00-903e-11eb-86e9-000c29eac05b

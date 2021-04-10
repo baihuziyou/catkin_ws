@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+
+<!-- rosparam:操作yaml文件，加载，导出，删除参数
+    可以在launch中和node中操作
+    commond="load|dump|delet"             分别为加载，导出，删除参数到yaml文件
+    file=""                                                               操作的yaml文件
+    ns=""                                                                 命名空间
+    dump:操作会读取不到数据，因为launch文件是同事执行的，所以对应的参数并不会记录到指定的yaml文件中，
+                  可以另外写一个launch在之后执行，用于记录参数使用方法如下
+                 <rosparam command="dump" file="$(find launch)/yaml/my_yaml_output.yaml"/>
+    delete: <rosparam command="delete" param="age"/>  删除age这个参数
+ -->
+    <rosparam command="load" file="$(find launch)/yaml/my_yaml.yaml"/>
+    <node name="my_turtlesim" pkg="turtlesim" type="turtlesim_node" output="screen">
+           <rosparam command="load" file="$(find launch)/yaml/my_yaml.yaml"/>
+    </node>
+
+    <rosparam command="delete" param="age"/>  
+</launch>

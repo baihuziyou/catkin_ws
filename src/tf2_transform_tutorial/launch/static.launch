@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node name="static_pub" pkg="tf2_transform_tutorial" type="tf2_tutorials1_static_pub" output="screen"/>
+
+    <node name="static_sub" pkg="tf2_transform_tutorial" type="tf2_tutorials1_static_sub" output="screen"/>
+    
+
+</launch>

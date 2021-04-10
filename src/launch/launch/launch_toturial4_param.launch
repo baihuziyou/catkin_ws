@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+<!-- param: 向ros参数服务器设置参数
+    可以在launch和node标签中，在node标签中的param会加上/my_turtlesim这个前缀，即视为私有
+    完整格式：<param name=""  type="" value=""/>但是type可以不用，他会根据赋值自动解析
+    type : 有 str|int|double|bool|yaml,一般yaml文件的操作用rosparam
+ -->
+    <param name="isDefault" value="true"/>
+
+    <node name='my_turtlesim' pkg="turtlesim" type="turtlesim_node" output="screen">
+        <param name="string_test" value="hello params"/>
+    </node>
+
+
+</launch>

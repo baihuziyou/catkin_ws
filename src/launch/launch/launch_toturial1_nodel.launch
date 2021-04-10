@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+<!-- node说明
+    name                                   :自己定义的名字（在ROS网络拓扑中的节点名称）
+    pkg                                        : 功能包 ,
+    type                                       :节点名 ,
+    output="screen"             : 输出信息在屏幕上，也可以使用log：日志，
+    args="arg1 arg2"             : 这个可以用来传递参数给节点，用空格分割，
+    respawn="true|false"    : 节点退出是否自动重启，
+    respawn_delay="N"      : 节点重启的时间设置
+    required="true|false"    : 节点是否是必须的，关闭节点后程序退出。和respwan不能同事设置
+    ns="xxx"                              : 命名空间，设置节点的命名空间避免重名,ns相同的时候才能通行 
+                                                       xxx/turtlesim/turtles_teleop_key 
+    machine="机器名"          : 可以在不同，
+    node                                      : 启动顺序是随机的，
+-->
+    <node name="my_control" pkg="turtlesim" type="turtlesim_node" output="screen" ns="xxx" respawn="true"/>
+    <node name="my_turtlesim" pkg="turtlesim" type="turtle_teleop_key" required="true" ns="xxx" output="screen"/>
+</launch>
+

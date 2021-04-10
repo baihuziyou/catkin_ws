@@ -1,0 +1,8 @@
+prefix=/home/baihuziyou/catkin_ws/devel
+
+Name: tf2_transform_tutorial
+Description: Description of tf2_transform_tutorial
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

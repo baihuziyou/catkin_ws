@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<launch>
+<!-- group:分组并通过if决定是否执行该group
+        ns:命名空间
+        if="$(arg xxx )" :参数xxx决定group是否执行
+ -->
+    <arg name="control1" default="true"/>
+    <arg name="control2" default="true"/>
+    <group ns="my_turtle1">
+        <node name="my_turtlesim" pkg="turtlesim" type="turtlesim_node" output="screen" />
+        <group if="$(arg control1)">
+            <node name="my_teleop_key" pkg="turtlesim" type="turtle_teleop_key" output="screen"/>
+        </group>
+    </group>
+
+    <group ns="my_turtle2">
+        <node name="my_turtlesim" pkg="turtlesim" type="turtlesim_node" output="screen"/>
+        <group if="$(arg control2)">
+            <node name="my_teleop_key" pkg="turtlesim" type="turtle_teleop_key" output="screen"/>
+        </group>
+    </group>
+
+</launch>
