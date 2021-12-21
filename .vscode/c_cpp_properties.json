@@ -1,20 +1,22 @@
 {
-  "configurations": [
-    {
-      "browse": {
-        "databaseFilename": "",
-        "limitSymbolsToIncludedHeaders": true
-      },
-      "includePath": [
-        "/home/baihuziyou/catkin_ws/devel/include/**",
-        "/opt/ros/melodic/include/**",
-        "/home/baihuziyou/catkin_ws/src/beginner_tutorials/include/**",
-        "/home/baihuziyou/catkin_ws/src/launch/include/**",
-        "/home/baihuziyou/catkin_ws/src/tf2_transform_tutorial/include/**",
-        "/usr/include/**"
-      ],
-      "name": "ROS"
-    }
-  ],
-  "version": 4
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/baihuziyou/catkin_ws/devel/include/**",
+                "/opt/ros/melodic/include/**",
+                "/home/baihuziyou/catkin_ws/src/beginner_tutorials/include/**",
+                "/home/baihuziyou/catkin_ws/src/launch/include/**",
+                "/home/baihuziyou/catkin_ws/src/tf2_transform_tutorial/include/**",
+                "/usr/include/**",
+                "/opt/ros/melodic/include"
+            ],
+            "cppStandard": "c++17",
+            "name": "ROS"
+        }
+    ],
+    "version": 4
 }

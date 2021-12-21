@@ -56,8 +56,8 @@
   <build_export_depend>rospy</build_export_depend>
   <build_export_depend>std_msgs</build_export_depend>
 
-  <build_depend>message_generation</build_depend>           <!-- 自定义msg文件构建依赖 -->
-  <exec_depend>message_runtime</exec_depend>                    <!-- 自定义msg文件执行依赖 -->
+  <build_depend>message_generation</build_depend>           <!-- 自定义msg,srv文件构建依赖 -->
+  <exec_depend>message_runtime</exec_depend>                    <!-- 自定义msg,srv文件执行依赖 -->
 
   <exec_depend>roscpp</exec_depend>
   <exec_depend>rospy</exec_depend>
